@@ -16,7 +16,8 @@ button.addEventListener("click", function () {
   } else {
     // Si pasa las validaciones anteriores, el email es válido
     signupcont.style.display = "none";
-    success.style.display = "grid";
+    success.style.display = "flex";
+    success.style.flexDirection = "column";
     email.innerText = inputtext.value;
   }
 });
