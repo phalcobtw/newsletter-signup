@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font: inherit;
+}
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --darkslategrey: hsl(234, 29%, 20%);
+  --charcoalgrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--roboto);
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: var(--darkslategrey);
+  color: var(--darkslategrey);
+}
+
+.grid-flow {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
+}
+
+.signup-container {
+  display: flex;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  width: 950px;
+}
+
+.signup-info {
+  padding: 3.5rem;
+}
+
+.signup-info h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list-container {
+  margin-bottom: 1rem;
+}
+
+.signup-info > .list-container {
+  gap: 1rem;
+}
+
+.signup-info > .email-container {
+  display: grid;
+  /* gap: 0.5rem; */
+}
+
+.email-title-container {
+  display: flex;
+  font-weight: 700;
+  font-size: 0.8em;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+/* .email {
+  color: var(--darkslategrey);
+} */
+
+.email-title-container > .error-text {
+  display: none;
+  color: var(--tomato);
+}
+
+.email-text {
+  width: 100%;
+  border-radius: 10px;
+  padding: 1.2rem;
+  border: 1px solid var(--grey);
+  margin-bottom: 1.5rem;
+}
+
+.email-text:focus {
+  border: 1px solid var(--grey);
+}
+
+.button {
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--darkslategrey);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.email-button:hover {
+  background-color: var(--charcoalgrey);
+}
+
+.success-container {
+  display: none;
+  background-color: var(--white);
+  padding: 4rem;
+  border-radius: 2rem;
+  width: 475px;
+  color: var(--darkslategrey);
+}
+
+.thanks {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.success-container > p {
+  font-size: 0.95em;
+}
+
+.success-container p > span {
+  font-weight: 700;
+}
